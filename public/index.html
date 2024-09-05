@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="icon" href="%PUBLIC_URL%/3.webp" type="image/webp" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:title" content="React App" />
+    <meta property="og:description" content="Web site created using create-react-app" />
+    <meta property="og:image" content="%PUBLIC_URL%/logo192.png" />
+    <meta property="og:url" content="http://yourdomain.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@yourtwitterhandle" />
+    <meta name="twitter:title" content="React App" />
+    <meta name="twitter:description" content="Web site created using create-react-app" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/logo192.png" />
+    <title>Bit-Blitz</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const baseTitle = "Bit-Blitz";
+            const icons = ["❤️", "😺"];
+            let currentIndex = 0;
+
+            function updateTitle() {
+                document.title = `${baseTitle} ${icons[currentIndex]}`;
+                currentIndex = (currentIndex + 1) % icons.length;
+            }
+
+            setInterval(updateTitle, 1000); // Обновление каждую секунду
+        });
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+html {
+  background-color: #1f1f1f;
+  overflow: hidden;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+body {}
+
+.App {
+  font-size: 16px;
+  font-family: "Pixelify Sans", sans-serif;
+  text-align: center;
+  background-color: #282c34;
+  color: white;
+  min-height: 100vh;
+  display: contents;
+  flex-direction: column;
+  user-select: none;
+}
+
+header {}
+
+.header-panel {
+  display: flex;
+}
+
+.canvas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.canvas-wrapper {
+  border: 2px solid #252525;
+  overflow: auto;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.color-picker {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  width: 120px;
+}
+
+.color-picker-m {
+  align-items: center;
+  align-content: center;
+  margin-top: 10px;
+}
+
+.recent-colors {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recent-color {
+  margin-bottom: 3px;
+  margin-left: 3px;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #b9b9b9;
+  cursor: pointer;
+}
+
+.controls {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10;
+}
+
+.buttons button:hover {
+  background-color: #777;
+}
+
+
+canvas {
+  cursor: crosshair;
+}
+
+h2 {
+  text-align: center;
+  transition: all 1000ms ease;
+  margin: 0 0 0 0;
+}
+
+.letters-h2 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  position: fixed;
+  background: #1f1f1f9d;
+  border-radius: 10px;
+  height: 60px;
+  top: 40px;
+}
+
+button {
+  font-size: 14px;
+  font-family: "Pixelify Sans", sans-serif;
+  align-items: center;
+  word-break: keep-all;
+  width: px;
+  transition: all 300ms ease;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: static;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.zoom-buttons {
+  position: fixed;
+  bottom: 270px;
+  left: 100px;
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+  width: 160px;
+  height: 50px;
+}
+
+.zoom-button {
+  background-color: #282c34;
+  border: 2px solid black;
+  background: lightgray;
+}
+
+.zoom-button:hover {
+  background-color: #5772a7;
+}
+
+input {
+  font-family: "Pixelify Sans", sans-serif;
+  border: #000000 2px solid;
+  margin-bottom: 5px;
+  width: 180px;
+}
+
+form {
+  margin-top: 20px;
+  color: #000000;
+  border: 5px black solid;
+  background-color: #ffffff;
+  position: fixed;
+  top: 90px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 30px;
+}
+
+.color-selector {
+  position: fixed;
+  bottom: 0px;
+  color: black;
+  left: 30px;
+  border: 2px solid black;
+  background: rgba(153, 153, 153, 0.48);
+  z-index: 1;
+  width: 200px;
+}
+
+.colors-pallete {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Rules-Modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top:120px;
+  width: 150px;
+  color: #000000;
+  align-content: center;
+  justify-content: center;
+  word-break: break-all;
+  z-index: 2;
+  right: 30px;
+}
+
+.Rules-Modal button {
+  background: #00000000;
+  margin-top: 20px;
+  width: 50%;
+  animation: ButtonFlashing infinite 2s;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+@keyframes ButtonFlashing {
+  0% {
+    background: #80767600;
+    width: 100%;
+  }
+  33% {
+    background: #80767600;
+    width: 50%;
+  }
+  66% {
+    background: #833f9133;
+    width: 100%;
+  }
+  100% {
+    background: #833f9100;
+    width: 100%;
+  }
+}
+
+.Rules-Modal button:hover {
+  background: #80767600;
+  animation: RulesButton forwards 1s;
+}
+
+@keyframes RulesButton {
+  0% {
+    background: #80767600;
+    width: 60%;
+  }
+
+  50% {
+    background: #4442423a;
+    color: black;
+    width: 45%;
+  }
+
+  100% {
+    background: #833f91;
+    color: white;
+    width: 100%;
+  }
+}
+
+h1 {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  margin: 0 0 0 0;
+  background: #aa7eb36b;
+  width: 95%;
+  padding: 7px;
+  animation: h1-animation infinite 2s;
+}
+
+.h1-main {
+  text-align: center;
+  height: 50px;
+  align-content: center;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+@keyframes h1-animation {
+  0% {
+    font-size: 25px;
+  }
+
+  50% {
+    font-size: 29px;
+  }
+
+  100% {
+    font-size: 25px;
+  }
+}
+
+@keyframes h1-animation-s {
+  0% {
+    font-size: 20px;
+  }
+
+  50% {
+    font-size: 25px;
+  }
+
+  100% {
+    font-size: 20px;
+  }
+}
+
+a {
+  width: 95%;
+  background: #aa7eb36b;
+  color: rgb(0, 0, 0);
+  padding: 7px;
+  word-break:normal;
+  font-size: 11px;
+}
+
+.a-biggger {
+  font-size: 16px;
+}
+
+.counter {
+  position: fixed;
+  color: black;
+  background: rgba(153, 153, 153, 0.48);
+  right: 0px;
+  padding: 2px;
+  z-index: 1;
+  width: 125px;
+  bottom: -15px;
+  margin-right: 0px;
+  font-size: 12px;
+}
+.colors-pallete input {
+  width: 60px;
+}
+
+.move-arrow {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  font-weight: 900;
+}
+
+.up-arrow {
+  width: 150px;
+  top: 10px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.down-arrow {
+  width: 150px;
+  bottom: 5px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.left-arrow {
+  height: 150px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-arrow {
+  height: 150px;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.move-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 425px) {
+  .h1-main {
+    height: 20px;
+  }
+  h1 {
+    font-size: 20px;
+    animation: h1-animation-s infinite 2s;
+  }
+  .Rules-Modal button {
+    margin-top: 5px;
+  }
+  .a-biggger {
+    font-size: 13px;
+  }
+  a {
+    font-size: 10px;
+  }
+  button {
+    font-size: 10px;
+  }
+  form h2 {
+    font-size: 18px;
+  }
+  form {
+    left: 10px;
+  }
+  input {
+    width: 120px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  .color-selector {
+    left: 10px;
+    width: 135px;
+  }
+  .zoom-buttons {
+    bottom: 240px;
+    left: 50px;
+  }
+  .up-arrow {
+    width: 30px;
+  }
+  
+  .down-arrow {
+    width: 30px;
+    right: 46%;
+  }
+  
+  .left-arrow {
+    height: 100px;
+  }
+  
+  .right-arrow {
+    height: 100px;
+  }
+}
