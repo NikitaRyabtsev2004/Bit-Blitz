@@ -1,7 +1,7 @@
 # Bit-Blitz: Интерактивная Платформа для Коллаборативного Пиксель-Арта
 
 [![GitHub](https://img.shields.io/badge/GitHub-Link-blue.svg)](https://github.com/ryabcev-nikit/bit-blitz)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 
 ## О проекте
 
