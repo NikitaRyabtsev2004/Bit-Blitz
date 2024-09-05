@@ -26,7 +26,7 @@ Bit-Blitz - это захватывающая онлайн-платформа, �
 
 1. Клонируйте репозиторий:
 
-git clone https://github.com/ryabcev-nikit/bit-blitz.git
+git clone https://github.com/NikitaRyabtsev2004/Bit-Blitz
 
 2. Перейдите в директорию проекта:
 
